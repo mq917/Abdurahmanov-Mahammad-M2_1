@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <title>M2</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"/>
+</head>
+    <body>
+        <div class="main">
+            <div class="field">
+               <label for="s">Начальная сумма вклада ($)</label>
+               <input type="text" id="s" />
+            </div>
+            <div class="field">
+               <label for="m">Сумма ежемесячного пополнения ($)</label>
+               <input type="text" id="m" />
+            </div>
+            <div class="field">
+               <label for="p">Процентная ставка (%)</label>
+               <input type="text" id="p" />
+            </div>
+            <div class="field">
+                <label for="t">Срок вклада</label>
+                <input type="text" id="t" />
+             </div>
+             <div class="field">
+                <!-- <input id="elem1" type="text" name="quantity" placeholder="Количество">  -->
+                <input id="butt" type="button" value="Рассчитать"/><br><br>
+                <div id="str"></div>
+             </div>
+         </div>
+         <script src="index.js"></script>
+    </body>
+</html>
