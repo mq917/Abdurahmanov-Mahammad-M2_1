@@ -5,15 +5,26 @@ function result() {
     let amountOfMonth = Number(document.getElementById('m').value);
     let depositYield = Number(document.getElementById('p').value);
     let depositTermDay = Number(document.getElementById('t').value);
-    let a = Math.floor(depositTermDay / 30);
-    let b = Math.floor(depositTermDay / 360);
-
-    maqa
-
-    for (let i=0; i<b ; i++) {
-            startAmount = startAmount + (startAmount * (depositYield / 100));    
+    if (startAmount < 0) {
+        document.getElementById('str').innerHTML = ("nachalnaya summa ukazano nepravilno");
+        return;
+    } 
+    if (amountOfMonth < 0) {
+        document.getElementById('str').innerHTML = ("summa popolnenie vvedono ne pravilno");
+        return;
+    }
+    if (depositYield < 0) {
+        document.getElementById('str').innerHTML = ("nepravilnoy format protsentov");
+        return;
+    }
+    if (depositTermDay < 0) {
+        document.getElementById('str').innerHTML = ("srok vveden nepravilno");
+        return;
     }
 
-    console.log(startAmount);
-        document.getElementById('str').innerHTML = Number(result);
+    let a = Math.floor(depositTermDay / 30);
+    for (let k = 0; k < a; k++) {
+        startAmount = startAmount + amountOfMonth + startAmount * depositYield / 100 / 12;
+    }
+    document.getElementById('str').innerHTML = startAmount;
 }
