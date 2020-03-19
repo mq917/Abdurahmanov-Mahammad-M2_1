@@ -8,7 +8,7 @@ function result() {
     let a = Math.floor(depositTermDay / 30);
     let b = Math.floor(depositTermDay / 360);
 
-    
+    maqa
 
     for (let i=0; i<b ; i++) {
             startAmount = startAmount + (startAmount * (depositYield / 100));    
