@@ -6,19 +6,19 @@ function result() {
     let depositYield = Number(document.getElementById('p').value);
     let depositTermDay = Number(document.getElementById('t').value);
     if (startAmount < 0) {
-        document.getElementById('str').innerHTML = ("nachalnaya summa ukazano nepravilno");
+        document.getElementById('str').innerHTML = ("начальная сумма указано неправильно");
         return;
     } 
     if (amountOfMonth < 0) {
-        document.getElementById('str').innerHTML = ("summa popolnenie vvedono ne pravilno");
+        document.getElementById('str').innerHTML = ("сумма пополнения введено неправильно");
         return;
     }
     if (depositYield < 0) {
-        document.getElementById('str').innerHTML = ("nepravilnoy format protsentov");
+        document.getElementById('str').innerHTML = ("неправильный формат процентовой ставки");
         return;
     }
     if (depositTermDay < 0) {
-        document.getElementById('str').innerHTML = ("srok vveden nepravilno");
+        document.getElementById('str').innerHTML = ("срок введен неправильно");
         return;
     }
 
