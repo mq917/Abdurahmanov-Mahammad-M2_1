@@ -9,17 +9,20 @@ function result() {
         document.getElementById('str').innerHTML = ("начальная сумма указано неправильно");
         return;
     } 
-    if (amountOfMonth < 0) {
+    if (amountOfMonth < 0 || Number.isNaN(amountOfMonth)) {
         document.getElementById('str').innerHTML = ("сумма пополнения введено неправильно");
-        return;
+        console.log('wrong type');
+        return NaN;
     }
-    if (depositYield < 0) {
+    if (depositYield < 0 || Number.isNaN(depositYield)) {
         document.getElementById('str').innerHTML = ("неправильный формат процентовой ставки");
-        return;
+        console.log('wrong type');
+        return NaN;
     }
-    if (depositTermDay < 0) {
+    if (depositTermDay < 0 || Number.isNaN(depositTermDay)) {
         document.getElementById('str').innerHTML = ("срок введен неправильно");
-        return;
+        console.log('wrong type');
+        return NaN;
     }
 
     let a = Math.floor(depositTermDay / 30);
