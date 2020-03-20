@@ -5,9 +5,10 @@ function result() {
     let amountOfMonth = Number(document.getElementById('m').value);
     let depositYield = Number(document.getElementById('p').value);
     let depositTermDay = Number(document.getElementById('t').value);
-    if (startAmount < 0) {
+    if (startAmount < 0 || Number.isNaN(startAmount)) {
         document.getElementById('str').innerHTML = ("начальная сумма указано неправильно");
-        return;
+        console.log('wrong type');
+        return NaN;
     } 
     if (amountOfMonth < 0 || Number.isNaN(amountOfMonth)) {
         document.getElementById('str').innerHTML = ("сумма пополнения введено неправильно");
